@@ -59,7 +59,7 @@ def main_logger_info(message: str) -> None:
 def train(config: str):
     args: TrainArgs = TrainArgs.load(config, drop_extra_fields=False)
     print(f"args: {args}")
-    set_logger(logging.INFO)
+    set_logger(logging.DEBUG)
 
     with ExitStack() as exit_stack:
         _train(args, exit_stack)
